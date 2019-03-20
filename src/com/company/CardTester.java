@@ -13,8 +13,8 @@ public class CardTester {
     public static void main(String[] args) {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
 
-        Card c = new Card("Fourth", "Cool", 4);
-        Card d = new Card("Fourth", "Cool", 4);
+        Card c = new Card("Sixth", "Cool", 4);
+        Card d = new Card("Sixth", "Cool", 4);
 
 
         //For the assignment
