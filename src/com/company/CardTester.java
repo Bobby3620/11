@@ -17,8 +17,13 @@ public class CardTester {
         Card d = new Card("Fourth", "Cool", 4);
 
 
+        //For the assignment
 
+        System.out.println(c.rank());
+        System.out.println(c.suit());
+        System.out.println(c.pointValue());
         System.out.println(c.matches(d));
+        System.out.println(c.toString());
 
     }
 }

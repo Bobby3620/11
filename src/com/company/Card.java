@@ -23,6 +23,8 @@ public class Card {
      */
     private int pointValue;
 
+    private String PV;
+
 
     /**
      * Creates a new <code>Card</code> instance.
@@ -82,7 +84,7 @@ public class Card {
     public boolean matches(Card otherCard) {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
 
-        if (this == otherCard)
+        if (this.suit.equals(otherCard.suit) && this.rank.equals(otherCard.rank) && this.pointValue == otherCard.pointValue)
         {
             return true;
 
@@ -105,6 +107,10 @@ public class Card {
     @Override
     public String toString() {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-        return null;
+
+        PV = Integer.toString(pointValue);
+
+        return this.rank + " of " + this.suit + " Point Value = " + this.PV;
+
     }
 }
