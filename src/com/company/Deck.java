@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * It provides several operations including
  *      initialize, shuffle, deal, and check if empty.
  */
-public class Deck {
+public class Deck{
 
     /**
      * cards contains all the cards in the deck.
@@ -23,10 +23,6 @@ public class Deck {
      */
     private int size;
 
-    private String[] PV;
-
-    private String[] ALL;
-
 
     /**
      * Creates a new <code>Deck</code> instance.<BR>
@@ -38,18 +34,24 @@ public class Deck {
      */
     public Deck(String[] ranks, String[] suits, int[] values) {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+        ArrayList listOfCards = new ArrayList();
 
-        //Converts the values into a string for List
-        PV = new String[values.length];
-        for (int i = 0; i < values.length; i++)
-        {
-            PV[i] = Integer.toString(values[i]);
+        for (int i = 0; i < values.length; i++){
+
+            listOfCards.add(i, ranks[i]);
+            listOfCards.add(i, suits[0]);
+            listOfCards.add(i, values[i]);
+            size++;
+
         }
 
-        for (int j = 0; j < ranks.length; j++){
+        for (int i = 0; i < values.length; i++){
 
+            listOfCards.add(i, ranks[i]);
+            listOfCards.add(i, suits[1]);
+            listOfCards.add(i, values[i]);
+            size++;
         }
-
 
     }
 
@@ -60,6 +62,12 @@ public class Deck {
      */
     public boolean isEmpty() {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+
+        if (size == 0){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     /**
@@ -68,6 +76,8 @@ public class Deck {
      */
     public int size() {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+
+        return size;
     }
 
     /**
@@ -85,6 +95,8 @@ public class Deck {
      */
     public Card deal() {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+
+        return deal();
     }
 
     /**

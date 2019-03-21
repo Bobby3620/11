@@ -16,7 +16,6 @@ public class CardTester {
         Card c = new Card("Sixth", "Cool", 4);
         Card d = new Card("Sixth", "Cool", 4);
 
-
         //For the assignment
 
         System.out.println(c.rank());
@@ -24,6 +23,15 @@ public class CardTester {
         System.out.println(c.pointValue());
         System.out.println(c.matches(d));
         System.out.println(c.toString());
+
+
+        String[] ranks = new String[]{"a" , "b", "c"};
+        String[] suits = new String[]{"1" , "2",};
+        int[] value = new int[]{1, 3, 5};
+
+        Deck e = new Deck(ranks, suits, value);
+        System.out.println(e.size());
+        System.out.println(e.isEmpty());
 
     }
 }
