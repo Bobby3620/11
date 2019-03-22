@@ -23,6 +23,7 @@ public class Deck{
      */
     private int size;
 
+    private int constant = 0;
 
     /**
      * Creates a new <code>Deck</code> instance.<BR>
@@ -36,23 +37,22 @@ public class Deck{
         /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
         ArrayList listOfCards = new ArrayList();
 
-        for (int i = 0; i < values.length; i++){
+        while (true){
 
-            listOfCards.add(i, ranks[i]);
-            listOfCards.add(i, suits[0]);
-            listOfCards.add(i, values[i]);
-            size++;
+            for (int i = 0; i < values.length; i++){
+
+                listOfCards.add(i, ranks[i]);
+                listOfCards.add(i, suits[constant]);
+                listOfCards.add(i, values[i]);
+                size++;
+
+            }
+
+            constant++;
+
+            //Think of a a statement for if ()
 
         }
-
-        for (int i = 0; i < values.length; i++){
-
-            listOfCards.add(i, ranks[i]);
-            listOfCards.add(i, suits[1]);
-            listOfCards.add(i, values[i]);
-            size++;
-        }
-
     }
 
 
