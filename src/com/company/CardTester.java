@@ -28,12 +28,14 @@ public class CardTester {
         //For activity two
 
         String[] ranks = new String[]{"a" , "b", "c"};
-        String[] suits = new String[]{"1" , "2"};
+        String[] suits = new String[]{"1" , "2", "3", "4", "5"};
         int[] value = new int[]{1, 3, 5};
 
         Deck e = new Deck(ranks, suits, value);
         System.out.println(e.size());
         System.out.println(e.isEmpty());
+        System.out.println(e.deal());
+        System.out.println(e.toString());
 
 
 

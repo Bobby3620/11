@@ -36,10 +36,11 @@ public class Deck{
     public Deck(String[] ranks, String[] suits, int[] values) {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
         ArrayList listOfCards = new ArrayList();
+        int i;
 
         while (true){
 
-            for (int i = 0; i < values.length; i++){
+            for (i = 0; i < values.length; i++){
 
                 listOfCards.add(i, ranks[i]);
                 listOfCards.add(i, suits[constant]);
@@ -50,7 +51,10 @@ public class Deck{
 
             constant++;
 
-            //Think of a a statement for if ()
+
+            if (constant == suits.length){
+                break;
+            }
 
         }
     }
@@ -96,7 +100,10 @@ public class Deck{
     public Card deal() {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
 
-        return deal();
+
+        System.out.println();
+        return null;
+
     }
 
     /**
