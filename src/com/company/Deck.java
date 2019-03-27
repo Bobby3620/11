@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -9,7 +8,7 @@ import java.util.ArrayList;
  * It provides several operations including
  *      initialize, shuffle, deal, and check if empty.
  */
-public class Deck{
+public class Deck {
 
     /**
      * cards contains all the cards in the deck.
@@ -23,7 +22,6 @@ public class Deck{
      */
     private int size;
 
-    private int constant = 0;
 
     /**
      * Creates a new <code>Deck</code> instance.<BR>
@@ -34,29 +32,14 @@ public class Deck{
      * @param values is an array containing all of the card point values.
      */
     public Deck(String[] ranks, String[] suits, int[] values) {
-        /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-        ArrayList listOfCards = new ArrayList();
-        int i;
-
-        while (true){
-
-            for (i = 0; i < values.length; i++){
-
-                listOfCards.add(i, ranks[i]);
-                listOfCards.add(i, suits[constant]);
-                listOfCards.add(i, values[i]);
-                size++;
-
+        cards = new ArrayList<>();
+        for (int j = 0; j < ranks.length; j++) {
+            for (String suitString : suits) {
+                cards.add(new Card(ranks[j], suitString, values[j]));
             }
-
-            constant++;
-
-
-            if (constant == suits.length){
-                break;
-            }
-
         }
+        size = cards.size();
+        shuffle();
     }
 
 
@@ -65,13 +48,7 @@ public class Deck{
      * @return true if this deck is empty, false otherwise.
      */
     public boolean isEmpty() {
-        /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-
-        if (size == 0){
-            return true;
-        }else {
-            return false;
-        }
+        return size == 0;
     }
 
     /**
@@ -79,8 +56,6 @@ public class Deck{
      * @return the number of undealt cards in this deck.
      */
     public int size() {
-        /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-
         return size;
     }
 
@@ -98,12 +73,12 @@ public class Deck{
      *         previously dealt.
      */
     public Card deal() {
-        /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-
-
-        System.out.println();
-        return null;
-
+        if (isEmpty()) {
+            return null;
+        }
+        size--;
+        Card c = cards.get(size);
+        return c;
     }
 
     /**
